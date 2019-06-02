@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    background-color: #eae5d6;
 }
 
 .container {
@@ -10,8 +11,8 @@ body {
 h1 {
     font-family: fantasy;
     font-size: 3em;
-    border-bottom: 2px solid pink;
-    border-right: 2px solid pink;
+    border-bottom: 2px solid #75726b;
+    border-right: 2px solid #75726b;
     width: 400px;
     text-align: center;
     box-shadow: 4px 4px 5px #888888;
@@ -22,9 +23,10 @@ img {
     width: 180px;
     height: 180px;
     margin: 10px;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 img:hover {
-    transform: scale(1.1);
+    transform: rotateY(180deg);
 }
+
