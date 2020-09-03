@@ -9,5 +9,7 @@ declare module 'styled-components' {
       tertiaryColor: string;
       fontColor: string;
       offWhite: string;
+      darkFontColor: string;
+      lightFontColor: string;
   }
 }

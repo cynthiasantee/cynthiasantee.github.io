@@ -1,20 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from '../util/breakingPoints';
+import { Card } from '../styles';
 
-export const InfoCard: React.FC = (props) => {
-    return (
-        <InfoContainerStyle>
-            {props.children}
-        </InfoContainerStyle>
-    )
-}
-
-export const InfoContainerStyle = styled.div`
-    background-color: white;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+export const InfoCard = styled(Card)`
     text-align: center;
 
     h3 {

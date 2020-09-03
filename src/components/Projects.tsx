@@ -1,17 +1,18 @@
 import React from 'react';
 import { navBarHeight } from "../util/navBarHeight";
 import styled from 'styled-components/macro';
-import {CardContainerStyle, CardStyle, FlexColumnStyle } from "../styles"
+import {Card, FlexColumnStyle } from "../styles"
 import { InfoCard } from './InfoCard';
+import { fontColor } from '../theme';
 
-const Projects = React.forwardRef<HTMLDivElement>((props, ref) => {
+const Projects = () => {
     return(
-      <Container ref={ref}>
+      <Container>
         <InfoCard>
         <h3>Projects</h3>
         </InfoCard>
           <CardContainer >
-            <Card className="first">
+            <ProjectCard className="first">
               <Title>CourtHoops</Title>
             {/* <ProjectContainer> */}
               <ProjectInfo>
@@ -32,23 +33,23 @@ const Projects = React.forwardRef<HTMLDivElement>((props, ref) => {
                 image
               </ProjectImage>
               {/* </ProjectContainer> */}
-            </Card>
+            </ProjectCard>
 
-            <Card className="second">
-            <Title>tournament-breacket-tree</Title>
-            {/* <ProjectContainer> */}
-            <ProjectInfo>
-              </ProjectInfo>
-              <ProjectImage>
-              image
-              </ProjectImage>
-              {/* </ProjectContainer> */}
-            </Card>
+            <ProjectCard className="second">
+              <Title>tournament-breacket-tree</Title>
+              {/* <ProjectContainer> */}
+              <ProjectInfo>
+                </ProjectInfo>
+                <ProjectImage>
+                image
+                </ProjectImage>
+                {/* </ProjectContainer> */}
+            </ProjectCard>
           
           </CardContainer>
       </Container>
     )
-});
+};
 
 export default Projects;
 
@@ -57,12 +58,6 @@ margin: 0;
 padding: 5px 0;
 text-align: center;
 `
-
-const ProjectContainer = styled.div`
-display: flex;
-width: 100%;
-`
-
 
 const ProjectInfo = styled.div`
   flex: 1;
@@ -76,7 +71,7 @@ const ProjectInfo = styled.div`
 `
 
 const ProjectImage = styled.div`
-flex: 1;
+  flex: 1;
 `
 
 const Container = styled.div`
@@ -84,11 +79,15 @@ const Container = styled.div`
     min-height: calc(100vh - ${navBarHeight}px);
 `
 
-const Card = styled.div`
-    ${CardStyle}
-    justify-content: flex-start;
-`
-
 const CardContainer = styled.div`
-    ${CardContainerStyle}
-`
+    display: flex;
+
+    & > * {
+      flex: 1;
+    }
+`;
+
+const ProjectCard = styled(Card)`
+  background-color: ${props => props.theme.primaryColor};
+  color: ${fontColor('primary')};
+`;

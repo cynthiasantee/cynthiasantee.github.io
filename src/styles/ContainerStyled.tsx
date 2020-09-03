@@ -13,7 +13,7 @@ nav {
     top: 0;
     width: 100%;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-    background-color: ${(props) => props.theme.offWhite};
+    background-color: ${(props) => props.theme.tertiaryColor};
     z-index: 10;
 
   .underlined {
@@ -26,7 +26,7 @@ button {
     width: 180px;
     border: 0;
     font-size: 20px;
-    background-color: ${(props) => props.theme.offWhite};
+    background-color: ${(props) => props.theme.tertiaryColor};
     font-family: Menlo;
 
     @media screen and ${breakpoint.mobile} {

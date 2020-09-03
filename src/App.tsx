@@ -7,6 +7,8 @@ import Image from "./components/Image"
 import AboutMe from "./components/AboutMe"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
+import { Section } from './components/Section';
+import styled from 'styled-components';
 
 
 export type Section = 'about' | 'projects' | 'contact' | 'none';
@@ -27,16 +29,30 @@ function App() {
         <Image></Image>
       </VisibilitySensor>
       <VisibilitySensor onChange={(isVisible: boolean) => isVisible && setCurrentSection('about')}>
-        <AboutMe ref={aboutMe}></AboutMe>
+        <AboutMeSection ref={aboutMe}>
+          <AboutMe></AboutMe>
+        </AboutMeSection>
       </VisibilitySensor>
       <VisibilitySensor onChange={(isVisible: boolean) => isVisible && setCurrentSection('projects')}>
-        <Projects ref={projects}></Projects>
+        <ProjectSection ref={projects}>
+          <Projects ></Projects>
+        </ProjectSection>
       </VisibilitySensor>
       <VisibilitySensor onChange={(isVisible: boolean) => isVisible && setCurrentSection('contact')}>
-        <Contact ref={contact}></Contact>
+        <Section ref={contact}>
+          <Contact></Contact>  
+        </Section>
       </VisibilitySensor>
     </ContainerStyled>
   );
 }
+
+const AboutMeSection = styled(Section)`
+  background-color: ${props => props.theme.secondaryColor};
+`;
+
+const ProjectSection = styled(Section)`
+  background-color: white;
+`;
 
 export default App;
