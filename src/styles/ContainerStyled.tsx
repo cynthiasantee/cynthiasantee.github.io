@@ -6,21 +6,6 @@ export const ContainerStyled = styled.div`
 background-color:${(props) => props.theme.offWhite};
 color: ${(props) => props.theme.fontColor};
 
-nav {
-    height: ${navBarHeight}px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-    background-color: ${(props) => props.theme.tertiaryColor};
-    z-index: 10;
-
-  .underlined {
-    border-bottom: 3px solid ${(props) => props.theme.fontColor};
-  }
-}
-
 button {
     height: 97%;
     width: 180px;

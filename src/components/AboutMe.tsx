@@ -5,45 +5,45 @@ import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import SchoolIcon from '@material-ui/icons/School';
 import CodeIcon from '@material-ui/icons/Code';
 import ReceiptIcon from '@material-ui/icons/Receipt';
-import { theme } from '../theme';
-import {Card, LinkContainer, FlexColumnStyle } from "../styles";
-import { InfoCard } from '../components/InfoCard';
+import { theme, fontColor } from '../theme';
+import {Card, LinkContainer, FlexColumnStyle, FlexStyle } from "../styles";
 
 const AboutMe = () => {
+  const iconStyle = {fontSize:"100px", color: `${theme.darkFontColor}`}
+
     return(
         <Container>
-          <Card>
-            <InfoCard>
-              <h3>About me</h3>
-              <p>
-                Web Developer Enthusiast Specializing in Front End
-              </p>
-              <p>After completing my Bachelor's in Nutrition in Brazil, I worked as a community manager at an indie game company, where I wrote my first code.</p>
-              <p>
-              Since then, I have built several projects by applying my knowledge of React, TypeScript, data structures, algorithms, and other technologies.
-              </p>
-            </InfoCard>
-          </Card>
-          
           <CardContainer>
-            <AboutMeCard className="first">
-            <CodeIcon style={{fontSize:"100px", color: `${theme.fontColor}` }}></CodeIcon>
+            <AboutMeCard>
+                <h3>About me</h3>
+                <p>
+                  Web Developer Enthusiast Specializing in Front End
+                </p>
+                <p>After completing my Bachelor's in Nutrition in Brazil, I worked as a community manager at an indie game company, where I wrote my first code.</p>
+                <p>
+                Since then, I have built several projects by applying my knowledge of React, TypeScript, data structures, algorithms, and other technologies.
+                </p>
+            </AboutMeCard>
+          </CardContainer>
+          <CardContainer>
+            <AboutMeTileCard className="first">
+            <CodeIcon style={iconStyle}></CodeIcon>
               <LinkContainer>
                 <p>Front End</p>
               </LinkContainer>
-            </AboutMeCard>
-            <AboutMeCard className="second">
-              <SchoolIcon style={{fontSize:"100px", color: `${theme.fontColor}`}}></SchoolIcon> 
+            </AboutMeTileCard>
+            <AboutMeTileCard className="second">
+              <SchoolIcon style={iconStyle}></SchoolIcon> 
               <LinkContainer>
               <p>Bachelor in Nutrition</p>
               </LinkContainer>
-            </AboutMeCard>
-            <AboutMeCard className="third" onClick={()=> window.open("https://pubmed.ncbi.nlm.nih.gov/31329496/", "_blank")}>
-              <ReceiptIcon style={{fontSize:"100px", color: `${theme.fontColor}` }}></ReceiptIcon>
+            </AboutMeTileCard>
+            <AboutMeTileCard className="third" onClick={()=> window.open("https://pubmed.ncbi.nlm.nih.gov/31329496/", "_blank")}>
+              <ReceiptIcon style={iconStyle}></ReceiptIcon>
               <LinkContainer>
                   <div style={{display: "flex", alignItems:"center"}}><OpenInNewIcon /><p>Published Article</p></div>
               </LinkContainer>
-            </AboutMeCard>
+            </AboutMeTileCard>
           </CardContainer>
         </Container>  
     )
@@ -57,13 +57,25 @@ const Container = styled.div`
 `
 
 const CardContainer = styled.div`
-  display flex;
+  ${FlexStyle}
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 850px;
+  
 `
 
 const AboutMeCard = styled(Card)`
-  width: 250px;
+  background-color: ${props => props.theme.primaryColor};
+  color: ${fontColor('primary')};
+  padding: 20px;
+`;
+
+const AboutMeTileCard = styled(AboutMeCard)`
+  flex: 1;
   flex-wrap: wrap;
+  padding: 5px;
+
+  p {
+    margin: 0;
+  }
 `;

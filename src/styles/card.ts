@@ -9,4 +9,5 @@ export const Card = styled.div`
     min-height: 100px;
     min-width: 250px;
     padding: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
 `;
