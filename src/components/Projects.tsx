@@ -1,7 +1,7 @@
 import React from 'react';
 import { navBarHeight } from "../util/navBarHeight";
 import styled from 'styled-components/macro';
-import {CardContainerStyle, CardStyle, FlexColumnStyle } from "../styles/GeneralStyles"
+import {CardContainerStyle, CardStyle, FlexColumnStyle } from "../styles"
 import { InfoCard } from './InfoCard';
 
 const Projects = React.forwardRef<HTMLDivElement>((props, ref) => {

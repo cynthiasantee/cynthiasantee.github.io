@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { CardContainerStyle, CardStyle, FlexColumnStyle, LinkContainer } from "../styles/GeneralStyles"
+import { CardContainerStyle, CardStyle, FlexColumnStyle, LinkContainer } from "../styles"
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { navBarHeight } from "../util/navBarHeight";
 import GitHubIcon from '@material-ui/icons/GitHub';
