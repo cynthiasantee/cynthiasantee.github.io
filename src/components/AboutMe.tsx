@@ -5,7 +5,7 @@ import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import SchoolIcon from '@material-ui/icons/School';
 import CodeIcon from '@material-ui/icons/Code';
 import ReceiptIcon from '@material-ui/icons/Receipt';
-import { theme } from '..';
+import { theme } from '../theme';
 import { InfoContainerStyle, CardContainerStyle, CardStyle, LinkContainerStyle, FlexColumnStyle } from "../styles/GeneralStyles"
 
 const AboutMe = React.forwardRef<HTMLDivElement>( (props, ref) => {

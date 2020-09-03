@@ -6,7 +6,7 @@ import { navBarHeight } from "../util/navBarHeight";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DescriptionIcon from '@material-ui/icons/Description';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
-import { theme } from '..';
+import { theme } from '../theme';
 import { breakpoint } from '../util/breakingPoints';
 
 const Contact = React.forwardRef<HTMLDivElement>((props, ref) => {

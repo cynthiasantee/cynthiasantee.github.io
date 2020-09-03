@@ -67,7 +67,6 @@ width: 100%;
 
 const ProjectInfo = styled.div`
   flex: 1;
-  font-family: Courier New;
   justify-content: flex-start;
   display: flex;
   width: 100%;

@@ -8,6 +8,6 @@ declare module 'styled-components' {
       secondaryColor: string;
       tertiaryColor: string;
       fontColor: string;
-      fontColorLight: string;
+      offWhite: string;
   }
 }

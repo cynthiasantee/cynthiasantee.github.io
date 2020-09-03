@@ -1,12 +1,10 @@
 // my-theme.ts
 import { DefaultTheme } from 'styled-components'
 
-const myTheme: DefaultTheme = {
+export const theme: DefaultTheme = {
+    fontColor: "#303030",
     primaryColor: '#08415c',
     secondaryColor: '#bfdbf7',
     tertiaryColor: '#e1e5f2',
-    fontColor: '#303030',
-    fontColorLight: 'white'
-}
-
-export { myTheme }
+    offWhite: "#f8f8ff",
+};

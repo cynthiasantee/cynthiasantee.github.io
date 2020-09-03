@@ -4,12 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from "styled-components";
-
-export const theme = {
-  fontColor: "#303030",
-  whiteColor: "#ffffff",
-  offWhite: "#f8f8ff",
-};
+import { theme } from './theme';
 
 ReactDOM.render(
   <React.StrictMode>

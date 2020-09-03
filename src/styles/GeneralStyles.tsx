@@ -1,5 +1,4 @@
 import { css } from "styled-components/macro";
-import { navBarHeight } from "../util/navBarHeight"
 import { pageWidth } from "../util/pageWidth"
 import { breakpoint } from "../util/breakingPoints";
 
@@ -17,25 +16,15 @@ export const FlexColumnStyle = css`
 `;
 
 export const Font20Style = css`
-    color: ${(props) => props.theme.fontColor};
-    font-family: Courier New;
     font-size: 20px;
 `
 
 export const Font25Style = css`
-    color: ${(props) => props.theme.fontColor};
-    font-family: Courier New;
     font-size: 25px;
 `
 
-export const FontStyle = css`
-    color: ${(props) => props.theme.fontColor};
-    font-family: Courier New;
-`
-
 export const InfoContainerStyle = css`
-    ${FontStyle}
-    background-color: ${(props) => props.theme.whiteColor};
+    background-color: white;
     border-radius: 4px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -66,7 +55,7 @@ export const CardContainerStyle = css`
 
 export const CardStyle = css`
     ${FlexColumnStyle}
-    background-color: ${(props) => props.theme.whiteColor};
+    background-color: white;
     border-radius: 4px;
     flex: 1;
     min-height: 250px;
