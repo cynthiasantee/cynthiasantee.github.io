@@ -1,17 +1,16 @@
 import React from 'react';
 import { navBarHeight } from "../util/navBarHeight";
 import styled from 'styled-components/macro';
-import { InfoContainerStyle, CardContainerStyle, CardStyle, FlexColumnStyle } from "../styles/GeneralStyles"
+import {CardContainerStyle, CardStyle, FlexColumnStyle } from "../styles/GeneralStyles"
+import { InfoCard } from './InfoCard';
 
 const Projects = React.forwardRef<HTMLDivElement>((props, ref) => {
     return(
       <Container ref={ref}>
-        <InfoContainer>
-            <h3>Projects</h3>
-          </InfoContainer>
+        <InfoCard>
+        <h3>Projects</h3>
+        </InfoCard>
           <CardContainer >
-
-          
             <Card className="first">
               <Title>CourtHoops</Title>
             {/* <ProjectContainer> */}
@@ -92,7 +91,4 @@ const Card = styled.div`
 
 const CardContainer = styled.div`
     ${CardContainerStyle}
-`
-const InfoContainer = styled.div`
-    ${InfoContainerStyle}
 `

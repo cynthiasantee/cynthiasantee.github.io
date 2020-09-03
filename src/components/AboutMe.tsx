@@ -6,22 +6,23 @@ import SchoolIcon from '@material-ui/icons/School';
 import CodeIcon from '@material-ui/icons/Code';
 import ReceiptIcon from '@material-ui/icons/Receipt';
 import { theme } from '../theme';
-import { InfoContainerStyle, CardContainerStyle, CardStyle, LinkContainerStyle, FlexColumnStyle } from "../styles/GeneralStyles"
+import {CardContainerStyle, CardStyle, LinkContainerStyle, FlexColumnStyle } from "../styles/GeneralStyles"
+import { InfoCard } from '../components/InfoCard';
 
 const AboutMe = React.forwardRef<HTMLDivElement>( (props, ref) => {
 
     return(
         <Container ref={ref}>
-        <InfoContainer>
-          <h3>About me</h3>
-          <p>
-            Web Developer Enthusiast Specializing in Front End
-          </p>
-          <p>After completing my Bachelor's in Nutrition in Brazil, I worked as a community manager at an indie game company, where I wrote my first code.</p>
-          <p>
-          Since then, I have built several projects by applying my knowledge of React, TypeScript, data structures, algorithms, and other technologies.
-          </p>
-        </InfoContainer>
+          <InfoCard>
+            <h3>About me</h3>
+            <p>
+              Web Developer Enthusiast Specializing in Front End
+            </p>
+            <p>After completing my Bachelor's in Nutrition in Brazil, I worked as a community manager at an indie game company, where I wrote my first code.</p>
+            <p>
+            Since then, I have built several projects by applying my knowledge of React, TypeScript, data structures, algorithms, and other technologies.
+            </p>
+          </InfoCard>
         <CardContainer>
         <Card className="first">
           <CodeIcon style={{fontSize:"100px", color: `${theme.fontColor}` }}></CodeIcon>
@@ -63,9 +64,6 @@ const Card = styled.div`
 
 const CardContainer = styled.div`
     ${CardContainerStyle}
-`
-const InfoContainer = styled.div`
-    ${InfoContainerStyle}
 `
 
 const LinkContainer = styled.div`

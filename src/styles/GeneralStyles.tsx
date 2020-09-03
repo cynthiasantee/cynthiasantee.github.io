@@ -9,47 +9,15 @@ export const FlexStyle = css`
 `;
 
 export const FlexColumnStyle = css`
-    align-items: center;
-    display: flex;
+    ${FlexStyle}
     flex-direction: column;
-    justify-content: center;
 `;
-
-export const Font20Style = css`
-    font-size: 20px;
-`
-
-export const Font25Style = css`
-    font-size: 25px;
-`
-
-export const InfoContainerStyle = css`
-    background-color: white;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    text-align: center;
-    width: ${pageWidth};
-
-    h3 {
-        font-size: 25px;
-    }
-    p {
-        font-size: 20px;
-        padding: 0 10px;
-
-        @media ${breakpoint.mobile} {
-            font-size: 18px;
-        }
-    }
-`
 
 export const CardContainerStyle = css`
     ${FlexStyle}
     width: ${pageWidth};
     @media ${breakpoint.mobileTablet} {
         flex-direction: column;
-
     }
 `
 
@@ -102,7 +70,6 @@ export const CardStyle = css`
 
 `
 export const LinkContainerStyle = css`
-    ${Font20Style}
     display: flex;
     align-items: center;
     text-align: center;

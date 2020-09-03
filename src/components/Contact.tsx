@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { Font25Style, CardContainerStyle, CardStyle, FlexColumnStyle, LinkContainerStyle } from "../styles/GeneralStyles"
+import { CardContainerStyle, CardStyle, FlexColumnStyle, LinkContainerStyle } from "../styles/GeneralStyles"
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { navBarHeight } from "../util/navBarHeight";
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -52,7 +52,6 @@ const Container = styled.div`
   // border: 1px solid black;
 
 p {
-  ${Font25Style}
   margin: 10px 0 0 0;
   padding: 0;
 
