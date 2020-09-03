@@ -1,4 +1,4 @@
-import { css } from "styled-components/macro";
+import styled, { css } from "styled-components/macro";
 import { pageWidth } from "../util/pageWidth"
 import { breakpoint } from "../util/breakingPoints";
 
@@ -69,9 +69,7 @@ export const CardStyle = css`
     }
 
 `
-export const LinkContainerStyle = css`
-    display: flex;
-    align-items: center;
+export const LinkContainer = styled.div`
+    ${FlexStyle}
     text-align: center;
-    justify-content: center;
 `

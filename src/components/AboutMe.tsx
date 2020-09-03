@@ -6,7 +6,7 @@ import SchoolIcon from '@material-ui/icons/School';
 import CodeIcon from '@material-ui/icons/Code';
 import ReceiptIcon from '@material-ui/icons/Receipt';
 import { theme } from '../theme';
-import {CardContainerStyle, CardStyle, LinkContainerStyle, FlexColumnStyle } from "../styles/GeneralStyles"
+import {CardContainerStyle, CardStyle, LinkContainer, FlexColumnStyle } from "../styles/GeneralStyles"
 import { InfoCard } from '../components/InfoCard';
 
 const AboutMe = React.forwardRef<HTMLDivElement>( (props, ref) => {
@@ -64,8 +64,4 @@ const Card = styled.div`
 
 const CardContainer = styled.div`
     ${CardContainerStyle}
-`
-
-const LinkContainer = styled.div`
-    ${LinkContainerStyle}
 `
