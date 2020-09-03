@@ -37,7 +37,6 @@ export const InfoContainerStyle = css`
     ${FontStyle}
     background-color: ${(props) => props.theme.whiteColor};
     border-radius: 4px;
-    min-height: 350px;
     margin-bottom: 20px;
     margin-top: 20px;
     text-align: center;
@@ -49,6 +48,10 @@ export const InfoContainerStyle = css`
     p {
         font-size: 20px;
         padding: 0 10px;
+
+        @media ${breakpoint.mobile} {
+            font-size: 18px;
+        }
     }
 `
 
@@ -91,6 +94,10 @@ export const CardStyle = css`
 
     &.third {
     margin-left: 10px;
+
+    &:hover{
+        cursor: pointer;
+      }
 
     @media ${breakpoint.mobileTablet} {
         margin-left: 0;

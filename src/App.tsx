@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
+import React from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 import { ContainerStyled } from "./styles/ContainerStyled"
 import { navBarHeight } from "./util/navBarHeight"
 import Nav from "./components/Nav"
@@ -18,54 +19,22 @@ export const contact = React.createRef<HTMLDivElement>();
 function App() {
 
   const [currentSection, setCurrentSection] = React.useState<Section>('about');
-
-  let aboutMeTop= 0;
-  let projectsTop = 0;
-  let contactTop = 0;
-
-  useEffect(() => {
-    aboutMeTop =  aboutMe.current?.offsetTop || 0;
-    projectsTop = projects.current?.offsetTop || 0;
-    contactTop = contact.current?.offsetTop || 0;
-  }, []);
-
-  const getSection = (): Section => {
-    const windowTop = window.pageYOffset + navBarHeight;
-    
-    if (window.pageYOffset === 0) {
-      return 'none'
-    } else if (windowTop < aboutMeTop) {
-      return 'about';
-    } else if (windowTop < projectsTop) {
-      return 'projects';
-    } else {
-      return 'contact';
-    }
-  }
-
-  useLayoutEffect(() => {
-    const handleScroll = (e: any) => {
-      console.log(getSection())
-      setCurrentSection(getSection());
-    }
-
-    window.addEventListener("scroll", handleScroll)
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
-
-
-
  
   return (
     <ContainerStyled>
       <Nav section={currentSection} ></Nav>
-      <Image></Image>
-      <AboutMe ref={aboutMe}></AboutMe>
-      <Projects ref={projects}></Projects>
-      <Contact ref={contact}></Contact>
+      <VisibilitySensor onChange={(isVisible: boolean) => isVisible && setCurrentSection('none')}>
+        <Image></Image>
+      </VisibilitySensor>
+      <VisibilitySensor onChange={(isVisible: boolean) => isVisible && setCurrentSection('about')}>
+        <AboutMe ref={aboutMe}></AboutMe>
+      </VisibilitySensor>
+      <VisibilitySensor onChange={(isVisible: boolean) => isVisible && setCurrentSection('projects')}>
+        <Projects ref={projects}></Projects>
+      </VisibilitySensor>
+      <VisibilitySensor onChange={(isVisible: boolean) => isVisible && setCurrentSection('contact')}>
+        <Contact ref={contact}></Contact>
+      </VisibilitySensor>
     </ContainerStyled>
   );
 }

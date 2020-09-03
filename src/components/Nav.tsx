@@ -4,9 +4,9 @@ import {aboutMe, contact, projects} from "../App"
 import { navBarHeight } from "../util/navBarHeight";
 
 //General scroll to element function
-const scrollToAboutMe = (ref: any) => window.scrollTo(0, ref.current.offsetTop-navBarHeight-1)
-const scrollToProjects = (ref: any) => window.scrollTo(0, ref.current.offsetTop-navBarHeight-1)  
-const scrollToContact = (ref: any) => window.scrollTo(0, ref.current.offsetTop-navBarHeight-1)  
+const scrollToAboutMe = (ref: any) => window.scrollTo(0, ref.current.offsetTop-navBarHeight)
+const scrollToProjects = (ref: any) => window.scrollTo(0, ref.current.offsetTop-navBarHeight)  
+const scrollToContact = (ref: any) => window.scrollTo(0, ref.current.offsetTop-navBarHeight)  
 
 const Nav = (props: {section: Section}) => {
     console.log(props.section);
