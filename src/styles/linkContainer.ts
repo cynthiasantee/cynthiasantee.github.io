@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { FlexStyle } from './flex';
 
 export const LinkContainer = styled.div`

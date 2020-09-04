@@ -1,58 +1,49 @@
 import React from 'react';
-import VisibilitySensor from 'react-visibility-sensor';
 import { ContainerStyled } from "./styles/ContainerStyled"
-import { navBarHeight } from "./util/navBarHeight"
 import Nav from "./components/Nav"
 import Image from "./components/Image"
 import AboutMe from "./components/AboutMe"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import { Section } from './components/Section';
-import styled from 'styled-components';
-
-
-export type Section = 'about' | 'projects' | 'contact' | 'none';
+import styled from 'styled-components/macro';
+import { breakpoint } from './util/breakingPoints';
 
 export const aboutMe = React.createRef<HTMLDivElement>();
-export const projects = React.createRef<HTMLDivElement>()
 export const contact = React.createRef<HTMLDivElement>();
+export const projects = React.createRef<HTMLDivElement>();
 
 
 function App() {
 
-  const [currentSection, setCurrentSection] = React.useState<Section>('about');
- 
   return (
     <ContainerStyled>
-      <Nav section={currentSection} ></Nav>
-      <VisibilitySensor onChange={(isVisible: boolean) => isVisible && setCurrentSection('none')}>
+        <Nav></Nav>
         <Image></Image>
-      </VisibilitySensor>
-      <VisibilitySensor onChange={(isVisible: boolean) => isVisible && setCurrentSection('about')}>
-        <AboutMeSection ref={aboutMe}>
-          <AboutMe></AboutMe>
-        </AboutMeSection>
-      </VisibilitySensor>
-      <VisibilitySensor onChange={(isVisible: boolean) => isVisible && setCurrentSection('projects')}>
-        <ProjectSection ref={projects}>
-          <Projects ></Projects>
-        </ProjectSection>
-      </VisibilitySensor>
-      <VisibilitySensor onChange={(isVisible: boolean) => isVisible && setCurrentSection('contact')}>
-        <Section ref={contact}>
-          <Contact></Contact>  
-        </Section>
-      </VisibilitySensor>
+          <AboutMeSection ref={aboutMe}>
+            <AboutMe></AboutMe>
+          </AboutMeSection>
+
+          <ProjectSection ref={projects}>
+            <Projects></Projects>
+          </ProjectSection>
+
+          <Section ref={contact}>
+            <Contact></Contact>  
+          </Section>
     </ContainerStyled>
   );
 }
 
 const AboutMeSection = styled(Section)`
-  background-color: ${props => props.theme.secondaryColor};
+  background-color: ${props => props.theme.offWhite};
 `;
 
 const ProjectSection = styled(Section)`
   background-color: white;
+  @media ${breakpoint.mobileTablet} {
+    margin-top: 20px;
+  }
 `;
 
 export default App;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 interface Props {
     className?: string;
@@ -17,7 +17,6 @@ export const Section = React.forwardRef<any, Props>((props, ref) => {
 });
 
 const SectionContainer = styled.section`
-    padding: 20px 0;
     width: 100%;
 
     .content {

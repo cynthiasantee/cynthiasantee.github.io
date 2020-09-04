@@ -12,7 +12,7 @@ const Projects = () => {
     return(
       <Container>
         <h1>Projects</h1>
-          <CardContainer >
+          <CardContainer>
             <ProjectCard>
               <Title>CourtHoops</Title>
               <p><a href="https://www.kickstarter.com/projects/courthoops/courthoops-a-new-online-basketball-management-game">CourtHoops</a> is a modern online basketball management game designed for the modern web. Innovative, responsive, and immersive, the game aims to provide a whole new experience. Built with modern technologies like React, Redux, Node, and Rust.</p>
@@ -26,19 +26,19 @@ const Projects = () => {
                 <img alt="court-hoops-game-4" src={courtHoops4} />
             </ProjectCard>
             </CardContainer>
-          </CardContainer>
-          <CardContainer >
+          </CardContainer> 
+          <CardContainer style={{flexWrap: "wrap-reverse"}} >
             <CardContainer >
             <ProjectCard>
                 <img className="full" alt="court-hoops-game" src="https://raw.githubusercontent.com/cynthiasantee/tournament-bracket-tree/master/src/images/basic.png" />
-            </ProjectCard>
+            </ProjectCard> 
             </CardContainer>
             <ProjectCard>
               <Title>tournament-bracket-tree</Title>
               <p>One of CourtHoops requirements was to have a visual component for the tournament bracket. Existing solutions did not satisfy our requirements, so I started rolling out a custom one. During development, I realized the approach could be generalized into a reusable package.</p>
               <p><a href="https://www.npmjs.com/package/tournament-bracket-tree">tournament-bracket-tree</a> is an npm package for visualizing any kind of binary tree.</p>
             </ProjectCard>
-          </CardContainer>
+          </CardContainer> 
           <Images>
               <img alt="react" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"/>
               <img alt="ts" src="https://cdn.iconscout.com/icon/free/png-512/typescript-1174965.png"/>
@@ -47,7 +47,7 @@ const Projects = () => {
               <img alt="html" src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" />
               <img alt="css" src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" />
               <img alt="npm" src="https://authy.com/wp-content/uploads/npm-logo.png" />
-          </Images>
+          </Images> 
       </Container>
     )
 };
@@ -76,7 +76,7 @@ const CardContainer = styled.div`
 `;
 
 const ProjectCard = styled(Card)`
-  background-color: none;//${props => props.theme.tertiaryColor};
+  background-color: none;;
   box-shadow: none;
   color: ${fontColor('secondary')};
   flex-direction: row;
@@ -84,8 +84,9 @@ const ProjectCard = styled(Card)`
 
   img {
     margin: 10px;
-    width: 45%;
-    height: 45%;
+    width: 180px;
+    height: 180px;
+
   }
 
   & .full {

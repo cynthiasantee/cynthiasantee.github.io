@@ -6,9 +6,6 @@ export const theme: DefaultTheme = {
     primaryColor: '#035946',
     secondaryColor: '#bfdbf7',
     tertiaryColor: '#e1e5f2',
-    // primaryColor: '#f8f8ff',
-    // secondaryColor: '#f8f8ff',
-    // tertiaryColor: '#f8f8ff',
     offWhite: "#f8f8ff",
     darkFontColor: 'black',
     lightFontColor: 'white'

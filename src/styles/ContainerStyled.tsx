@@ -1,5 +1,4 @@
 import styled from "styled-components/macro";
-import { navBarHeight } from "../util/navBarHeight";
 import {breakpoint} from "../util/breakingPoints"
 
 export const ContainerStyled = styled.div`

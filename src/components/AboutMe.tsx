@@ -13,17 +13,17 @@ const AboutMe = () => {
 
     return(
         <Container>
-          <CardContainer>
-            <AboutMeCard>
-                <h3>About me</h3>
+          <CardContainer  >
+            <BigAboutMeCard>
+                <h1>About me</h1>
                 <p>
-                  Web Developer Enthusiast Specializing in Front End
+                  Web Developer Enthusiast Specializing in Front End.
                 </p>
                 <p>After completing my Bachelor's in Nutrition in Brazil, I worked as a community manager at an indie game company, where I wrote my first code.</p>
                 <p>
                 Since then, I have built several projects by applying my knowledge of React, TypeScript, data structures, algorithms, and other technologies.
                 </p>
-            </AboutMeCard>
+            </BigAboutMeCard>
           </CardContainer>
           <CardContainer>
             <AboutMeTileCard className="first">
@@ -35,7 +35,7 @@ const AboutMe = () => {
             <AboutMeTileCard className="second">
               <SchoolIcon style={iconStyle}></SchoolIcon> 
               <LinkContainer>
-              <p>Bachelor in Nutrition</p>
+              <p>Bachelor's in Nutrition</p>
               </LinkContainer>
             </AboutMeTileCard>
             <AboutMeTileCard className="third" onClick={()=> window.open("https://pubmed.ncbi.nlm.nih.gov/31329496/", "_blank")}>
@@ -54,6 +54,12 @@ export default AboutMe;
 const Container = styled.div`
     ${FlexColumnStyle}
     min-height: calc(100vh - ${navBarHeight}px);
+
+    .third {
+      cursor: pointer;
+    }
+
+
 `
 
 const CardContainer = styled.div`
@@ -61,19 +67,26 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 850px;
-  
 `
 
 const AboutMeCard = styled(Card)`
-  background-color: ${props => props.theme.primaryColor};
-  color: ${fontColor('primary')};
+  background-color: white;
+  color: ${fontColor('secondary')};
   padding: 20px;
+  text-align: center;
+`;
+
+const BigAboutMeCard = styled(AboutMeCard)`
+  background-color: ${props => props.theme.offWhite};
+  border: none;
+  box-shadow: none;
 `;
 
 const AboutMeTileCard = styled(AboutMeCard)`
   flex: 1;
   flex-wrap: wrap;
   padding: 5px;
+ 
 
   p {
     margin: 0;
