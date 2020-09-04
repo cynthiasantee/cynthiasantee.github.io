@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dacb31c4.chunk.css",
+    "main.js": "/static/js/main.62528906.chunk.js",
+    "main.js.map": "/static/js/main.62528906.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d85db5c2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d85db5c2.js.map",
+    "static/js/2.ce7cb97c.chunk.js": "/static/js/2.ce7cb97c.chunk.js",
+    "static/js/2.ce7cb97c.chunk.js.map": "/static/js/2.ce7cb97c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.19fe1c799b42180dc75fa7c3114321e4.js": "/precache-manifest.19fe1c799b42180dc75fa7c3114321e4.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.dacb31c4.chunk.css.map": "/static/css/main.dacb31c4.chunk.css.map",
+    "static/js/2.ce7cb97c.chunk.js.LICENSE.txt": "/static/js/2.ce7cb97c.chunk.js.LICENSE.txt",
+    "static/media/courthoops.png": "/static/media/courthoops.2c46a562.png",
+    "static/media/courthoops2.png": "/static/media/courthoops2.1124b23e.png",
+    "static/media/courthoops3.png": "/static/media/courthoops3.5a5db7a2.png",
+    "static/media/courthoops4.png": "/static/media/courthoops4.6080783b.png",
+    "static/media/cover.jpg": "/static/media/cover.1f20cc1b.jpg",
+    "static/media/mobileCover.jpg": "/static/media/mobileCover.b4041424.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d85db5c2.js",
+    "static/js/2.ce7cb97c.chunk.js",
+    "static/css/main.dacb31c4.chunk.css",
+    "static/js/main.62528906.chunk.js"
+  ]
+}
